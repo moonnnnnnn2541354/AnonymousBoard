@@ -1,5 +1,6 @@
 package com.example.boards.entity;
 
+import com.example.boards.util.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Board {
+public class Board extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // id가 생성될때마다 1씩 증가한값이 나옴
     private Long id; // id

@@ -47,7 +47,7 @@ public class BoardService {
 
     public List<BoardResponseDto> getBoardList() {
         // repository의 모든 Board를 불러오기
-        List<Board> boardList = boardRepository.findAll();
+        List<Board> boardList = boardRepository.findAllByOrderByCreatedAtDesc();
         // 이를 List인 ResponseDto로 변환해준다
         List<BoardResponseDto> list = new ArrayList<>();
         for (Board board : boardList) {
